@@ -1,20 +1,19 @@
-
-
-barWidth = 2 ;
-barLength = 7; 
+laserCurf = .3;
+barWidth = 1 ;
+barLength = 5; 
 barSpaceing = barWidth *2;
 
-gapBetweenClockAndCode = 3 ;
+gapBetweenClockAndCode = 7 ;
 
 startMargin = 2;
-endMargin = 5; 
+endMargin = 100; 
 sideMargin = 2;
 
 numberOfClocks = 8; 
 
 totalStripLength = barSpaceing* numberOfClocks + startMargin + endMargin;
 totalStripWidth = sideMargin * 2 + gapBetweenClockAndCode + barLength * 2;
-
+echo(totalStripWidth);
 
 
 
@@ -22,7 +21,7 @@ codeSequence = [1,1,0,0,1,0,0,1];
 
 
 module bar(){
-    square([barLength, barWidth]);
+    square([barLength - laserCurf, barWidth - laserCurf]);
 }
 
 
@@ -56,6 +55,9 @@ module plate(){
     
 }
 plate();
+
+
+
+
+
     
-    
-        
