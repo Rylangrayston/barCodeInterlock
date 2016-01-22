@@ -47,11 +47,12 @@ module plate(){
     difference(){
         square([totalStripWidth, totalStripLength]);
         translate([sideMargin, startMargin,0 ]){
-            translate([0, barWidth,0])
+            translate([barLength + gapBetweenClockAndCode, barWidth,0])
             clock();
-            translate([barLength + gapBetweenClockAndCode, barWidth/2,0])
+            translate([0, barWidth/2,0])
             code();
         }
+        translate([1,50-7/2])square(7);
     }
     
 }
