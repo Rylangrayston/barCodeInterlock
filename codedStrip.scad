@@ -9,7 +9,7 @@ startMargin = 2;
 endMargin = 100; 
 sideMargin = 2;
 
-numberOfClocks = 8; 
+numberOfClocks = 4; 
 
 totalStripLength = barSpaceing* numberOfClocks + startMargin + endMargin;
 totalStripWidth = sideMargin * 2 + gapBetweenClockAndCode + barLength * 2;
@@ -17,8 +17,8 @@ echo(totalStripWidth);
 
 
 
-codeSequence = [1,1,0,0,1,0,0,1];
-//0,1,1,0,1,1,0,0
+codeSequence = [0,0,1,0];
+
 
 module bar(){
     square([barLength - laserCurf, barWidth - laserCurf]);
