@@ -3,7 +3,7 @@ hole2=(5)/2-.2;
 hole3=1/2;
 
 
-pairDistance=12;
+pairDistance=12-3;
 edge=2;
 swipeLength=50;
 
@@ -20,4 +20,4 @@ module one(holeA=hole1) {
         translate([pairDistance/2,0]) circle(holeA,$fn=20);
     }
 }
-one(hole3);
+one(hole1);
